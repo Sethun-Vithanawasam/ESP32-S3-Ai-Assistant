@@ -1,7 +1,7 @@
 # **ESP32-AI Assistant**
 
 **Author:** Sethun Vithanawasam  
-**Version:**1.0
+**Version:** 1
 **Platform:** ESP32  
 **Language:** Arduino / C++  
 
