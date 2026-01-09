@@ -115,7 +115,7 @@ ESP32 initializing SPIFFS, WiFi, weather, and time module.
 
 ### AI Chat Interaction
 ![ESP32 AI Chat Screenshot](Extra/AiHelloresponse.png)  
-Serial Monitor showing AI assistant responding ("Hello").
+Serial Monitor showing AI assistant responding (Hello).
 
 ---
 
