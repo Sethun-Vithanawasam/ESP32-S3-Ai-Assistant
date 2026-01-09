@@ -121,8 +121,7 @@ Serial Monitor showing AI assistant responding (Hello).
 
 ## **Safety and Privacy**
 
-- Keep all API keys secure and private.  
-- Use a private GitHub repository for backups.  
+- Keep all API keys secure and private.    
 - For public sharing, replace API keys with placeholders.  
 
 ---
