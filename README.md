@@ -1,7 +1,7 @@
 # **ESP32-AI-S3 Assistant**
 
 **Author:** Sethun Vithanawasam  
-**Version:** 1.0  
+**Version:** 1.5  
 **Platform:** Arduino IDE  
 **Language:** Arduino / C++  
 
@@ -58,7 +58,7 @@ Key functionalities include:
 
 ### **LED Notifications**
 - Visual cues for AI responses and reminders.  
-- Customizable LED blink patterns for alerts.  
+- LED blink patterns for alerts.  
 
 ---
 
