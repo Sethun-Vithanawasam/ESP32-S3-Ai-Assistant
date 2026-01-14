@@ -1,15 +1,15 @@
-# **ESP32-AI Assistant**
+# **ESP32-AI-S3 Assistant**
 
 **Author:** Sethun Vithanawasam  
 **Version:** 1.0  
-**Platform:** ESP32  
+**Platform:** Arduino IDE  
 **Language:** Arduino / C++  
 
 ---
 
 ## **Project Overview**
 
-The **ESP32-AI Assistant** is an interactive, intelligent assistant that runs entirely on an ESP32 microcontroller. It allows users to communicate with AI, manage reminders, check weather, perform web searches, monitor system status, and more — all through the Arduino Serial Monitor.
+The **ESP32-AI-S3 Assistant** is an interactive, intelligent assistant that runs entirely on an ESP32 microcontroller. It allows users to communicate with AI, manage reminders, check weather, perform web searches, monitor system status, and more — all through the Arduino Serial Monitor.
 
 Unlike typical AI projects that require a full PC or cloud interface, this assistant leverages the ESP32’s capabilities to provide a compact, versatile solution. While interaction occurs via a connected computer or mobile device, the ESP32 handles memory, reminders, and real-time responses independently.
 
@@ -64,17 +64,22 @@ Key functionalities include:
 
 ## **Requirements**
 
-To run **ESP32-AI Assistant**, you will need:  
+To run **ESP32-AI-S3 Assistant**, you will need:  
 
-- An ESP32 development board (e.g., DevKit, AI Thinker)  
+- An ESP32-S3 development board (e.g., DevKit)  
 - Arduino IDE installed on your PC  
 - Internet access via WiFi  
 - Required Arduino libraries for:  
-  - WiFi management  
-  - HTTP requests  
-  - JSON parsing  
-  - Time handling  
-  - SPIFFS storage  
+- WiFi.h
+- HTTPClient.h 
+- ArduinoJson.h 
+- WiFiUdp.h 
+- NTPClient.h
+- TimeLib.h 
+- SPIFFS 
+- FS.h 
+- vector 
+- algorithm    
 
 ---
 
@@ -109,7 +114,7 @@ The assistant integrates with three main APIs. Each requires an API key:
 
 ## **Demo Screenshots**
 
-### ESP32-AI Boot Sequence
+### ESP32-AI-S3 Boot Sequence
 ![ESP32 Boot Screenshot](Extra/boot.png)  
 ESP32 initializing SPIFFS, WiFi, weather, and time module.
 
@@ -130,4 +135,4 @@ Serial Monitor showing AI assistant responding (Hello).
 
 - **Created by:** Sethun Vithanawasam  
 - **Uses:** OpenAI GPT API, Meteosource API, and Google Custom Search API  
-- **Powered by:** ESP32 and Arduino IDE
+- **Powered by:** ESP32-S3 and Arduino IDE
