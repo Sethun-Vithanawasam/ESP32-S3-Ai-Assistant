@@ -22,7 +22,7 @@ Key functionalities include:
 - **Web search:** Summarize top Google search results directly in the Serial Monitor.  
 - **System diagnostics:** Check WiFi status, IP address, CPU temperature, and uptime.  
 - **Time and date:** Track and display local time and date using NTP synchronization.  
-- **LED notifications:** Visual feedback for AI responses and reminders via the ESP32’s built-in LED.  
+- **LED notifications:** Visual feedback for AI responses and reminders via the ESP32-S3’s built-in LED.  
 
 ---
 
