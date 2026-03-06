@@ -128,7 +128,7 @@ ESP32 initializing FATFS, WiFi, weather, and time module.
 Serial Monitor showing AI assistant responding (Hello).
 
 ### AI Commands
-![ESP32 AI Commands](Exta/Help.png)
+![ESP32 AI Commands](Extra/Help.png)
 
 ### AI Version Commands
 ![ESP32 AI Version](Extra/Version.png)
