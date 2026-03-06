@@ -1,128 +1,143 @@
-#########################################################
-# ESP32-AI Assistant – Command Reference
-#########################################################
+# **ESP32-AI Assistant**
 
-AUTHOR      = Sethun Vithanawasam
-VERSION     = 1.6
-PLATFORM    = Arduino IDE
-LANGUAGE    = Arduino / C++
+**Author:** Sethun Vithanawasam  
+**Version:** 1.6  
+**Platform:** Arduino IDE  
+**Language:** Arduino / C++  
 
-#########################################################
-PROJECT_OVERVIEW
-#########################################################
-NAME        = ESP32-AI Assistant
-TYPE        = Intelligent microcontroller-based assistant
-CORE        = ESP32 (S3 or standard)
-INTERFACE   = Arduino Serial Monitor
-FUNCTIONS   = AI chat, reminders, weather, search, diagnostics, LED feedback
+---
 
-#########################################################
-KEY_FEATURES
-#########################################################
-[AI_CHAT]
-  ENGINE    = Google Gemini
-  FEATURES  = Natural language, adaptive tone, retry logic, uncertainty detection
+## **Project Overview**
 
-[MEMORY_SYSTEM]
-  STORAGE   = FATFS persistent memory
-  FEATURES  = Fact storage, relevance scoring, access counters
+The **ESP32-AI Assistant** is an interactive, intelligent assistant that runs entirely on an ESP32 microcontroller. It allows users to communicate with AI, manage reminders, check weather, perform web searches, monitor system status, and more — all through the Arduino Serial Monitor, with LED feedback for AI states.
 
-[REMINDERS]
-  INPUT     = Natural language parsing
-  RECURRENCE= once, daily, weekly, monthly
-  SAFETY    = Conflict detection, LED alerts
+Unlike typical AI projects that require a full PC or cloud interface, this assistant leverages the ESP32’s capabilities to provide a compact, versatile solution. While interaction occurs via a connected computer or mobile device, the ESP32 handles memory, reminders, and real-time responses independently.
 
-[WEATHER_UPDATES]
-  SOURCE    = Weather API
-  FEATURES  = Real-time city weather
+Key functionalities include:  
 
-[WEB_SEARCH]
-  FALLBACK  = Google Custom Search
-  TRIGGER   = Gemini uncertainty
+- **Chat with AI:** Natural language conversations powered by Google Gemini API.  
+- **Memory system:** Long-term fact storage with relevance scoring, persistent across reboots using FATFS.  
+- **Reminders:** Schedule one-time, daily, weekly, or monthly reminders with conflict detection.  
+- **Weather updates:** Fetch current weather for any city.  
+- **Web search:** Summarize Google search results when Gemini is uncertain.  
+- **System diagnostics:** Check WiFi status, IP address, CPU temperature, heap safety, and uptime.  
+- **Time and date:** Track and display local time and date using NTP synchronization.  
+- **LED notifications:** Visual feedback for AI states and reminders via NeoPixel LED.  
+- **Resilience:** Watchdog timer, heap guard, and self-healing WiFi for stability.  
 
-[SYSTEM_DIAGNOSTICS]
-  METRICS   = WiFi status, IP address, CPU temperature, heap safety, uptime
+---
 
-[TIME_DATE]
-  SYNC      = NTP (Sri Lanka UTC+5:30)
-  DISPLAY   = Local time + date
+## **Key Features**
 
-[LED_NOTIFICATIONS]
-  HARDWARE  = NeoPixel LED
-  STATES    = thinking, replied, error, proactive, evolving
+### **AI Chat**
+- Supports natural language conversations using Google Gemini API.  
+- Adaptive personality tone (technical, casual, or organized) based on usage patterns.  
+- Retry logic and uncertainty detection with web search fallback.  
 
-[RESILIENCE]
-  SAFETY    = Watchdog timer, heap guard, self-healing WiFi
+### **Memory System**
+- Teach the assistant facts with simple commands.  
+- Facts are persistent and prioritized by relevance scoring.  
 
-#########################################################
-COMMANDS
-#########################################################
-/help            → Show available commands
-/version         → Display current software version
-/diag            → Run system diagnostics
-/reminders       → List all active reminders
-/remove <id>     → Delete reminder by index
-/weather <city>  → Fetch weather for city
-/search <query>  → Perform Google search
-/clear           → Clear memory and history
+### **Reminders**
+- Schedule reminders for any time.  
+- Supports one-time, daily, weekly, and monthly recurrence.  
+- Notifications appear in the Serial Monitor, with LED blink feedback.  
 
-#########################################################
-REQUIREMENTS
-#########################################################
-HARDWARE:
-  - ESP32-S3 or ESP32 DevKit
+### **Weather Updates**
+- Fetches real-time weather using API integration.  
 
-SOFTWARE:
-  - Arduino IDE
-  - ESP32 board support
+### **Web Search**
+- Performs Google searches through Custom Search API.  
+- Summarizes top results for quick reference.  
 
-LIBRARIES:
-  - WiFi.h
-  - HTTPClient.h
-  - ArduinoJson.h
-  - WiFiUdp.h
-  - NTPClient.h
-  - TimeLib.h
-  - FFat / FS.h
-  - Adafruit_NeoPixel
-  - vector, algorithm
+### **System Diagnostics**
+- Monitors WiFi connectivity, local IP, CPU temperature, heap status, and uptime.  
 
-#########################################################
-APIs_USED
-#########################################################
-[GEMINI_API]
-  PURPOSE   = Conversational intelligence
-  KEY       = Google API key required
+### **Time and Date**
+- Uses NTP to maintain accurate local time (Sri Lanka UTC+5:30).  
+- Displays current time and date on demand.  
 
-[WEATHER_API]
-  PURPOSE   = Real-time weather data
-  KEY       = API key required
+### **LED Notifications**
+- NeoPixel LED visualizes AI states (thinking, replied, error, proactive, evolving).  
 
-[GOOGLE_CUSTOM_SEARCH_API]
-  PURPOSE   = Summarize search results
-  KEY       = Google API key + CX ID required
+### **Resilience**
+- Watchdog timer prevents stalls.  
+- Heap guard ensures safe memory usage.  
+- Auto-reconnect for WiFi.  
 
-#########################################################
-SETUP_INSTRUCTIONS
-#########################################################
-1. Install Arduino IDE + ESP32 board support
-2. Open .ino file
-3. Insert API keys (Gemini, Weather, Google Search)
-4. Connect ESP32 via USB
-5. Select correct board + port
-6. Upload code
-7. Open Serial Monitor @ 115200 baud
-8. Interact via commands or natural language
+---
 
-#########################################################
-SAFETY_PRIVACY
-#########################################################
-- Keep API keys secure
-- Replace with placeholders before sharing
+## **Requirements**
 
-#########################################################
-CREDITS
-#########################################################
-CREATOR     = Sethun Vithanawasam
-USES        = Google Gemini API, Weather API, Google Custom Search API
-POWERED_BY  = ESP32 + Arduino IDE
+To run **ESP32-AI Assistant**, you will need:  
+
+- An ESP32 development board (ESP32-S3 or standard DevKit)  
+- Arduino IDE installed on your PC  
+- Internet access via WiFi  
+- Required Arduino libraries for:  
+  - WiFi.h  
+  - HTTPClient.h  
+  - ArduinoJson.h  
+  - WiFiUdp.h  
+  - NTPClient.h  
+  - TimeLib.h  
+  - FFat / FS.h  
+  - Adafruit_NeoPixel  
+  - vector  
+  - algorithm  
+
+---
+
+## **APIs Used**
+
+The assistant integrates with three main APIs. Each requires an API key:
+
+### **Google Gemini API**
+- Provides conversational intelligence.  
+- Requires a Google API key.  
+
+### **Weather API**
+- Provides current weather information for any location.  
+- Requires an API key.  
+
+### **Google Custom Search API**
+- Allows performing Google searches and summarizing results.  
+- Requires a Google API key and Custom Search Engine ID.  
+
+---
+
+## **Setup Instructions**
+
+1. Install Arduino IDE and ensure ESP32 board support is added.  
+2. Open the `.ino` file in Arduino IDE.  
+3. Add your personal API keys at the top of the code for Gemini, Weather, and Google Search.  
+4. Connect your ESP32 board via USB, select the correct board and port, and upload the code.  
+5. Open the Serial Monitor at 115200 baud. Wait for the welcome message.  
+6. Start interacting with the assistant using commands or natural language.  
+
+---
+
+## **Demo Screenshots**
+
+### ESP32-AI Boot Sequence
+![ESP32 Boot Screenshot](Extra/boot.png)  
+ESP32 initializing FATFS, WiFi, weather, and time module.
+
+### AI Chat Interaction
+![ESP32 AI Chat Screenshot](Extra/AiHelloresponse.png)  
+Serial Monitor showing AI assistant responding (Hello).
+
+---
+
+## **Safety and Privacy**
+
+- Keep all API keys secure and private.    
+- For public sharing, replace API keys with placeholders.  
+
+---
+
+## **Credits**
+
+- **Created by:** Sethun Vithanawasam  
+- **Uses:** Google Gemini API, Weather API, and Google Custom Search API  
+- **Powered by:** ESP32 and Arduino IDE  
