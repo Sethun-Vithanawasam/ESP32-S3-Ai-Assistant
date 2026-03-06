@@ -133,6 +133,8 @@ Serial Monitor showing AI assistant responding (Hello).
 ### AI Version Commands
 ![ESP32 AI Version](Extra/Version.png)
 
+### AI System Diag
+![ESP32 AI System Diag](Extra/Diag.png)
 ---
 
 ## **Safety and Privacy**
