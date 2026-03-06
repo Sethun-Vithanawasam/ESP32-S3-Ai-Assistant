@@ -120,12 +120,18 @@ The assistant integrates with three main APIs. Each requires an API key:
 ## **Demo Screenshots**
 
 ### ESP32-AI Boot Sequence
-![ESP32 Boot Screenshot](Extra/boot.png)  
+![ESP32 Boot Screenshot](Extra/Boot.png)  
 ESP32 initializing FATFS, WiFi, weather, and time module.
 
 ### AI Chat Interaction
-![ESP32 AI Chat Screenshot](Extra/AiHelloresponse.png)  
+![ESP32 AI Chat Screenshot](Extra/Hello.png)  
 Serial Monitor showing AI assistant responding (Hello).
+
+### AI Commands
+![ESP32 AI Commands](Exta/Help.png)
+
+### AI Version Commands
+![ESP32 AI Version](Extra/Version.png)
 
 ---
 
