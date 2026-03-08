@@ -1,4 +1,4 @@
-# **ESP32-AI Assistant**
+# **ESP32-S3-AI Assistant**
 
 **Author:** Sethun Vithanawasam  
 **Version:** 1.6  
