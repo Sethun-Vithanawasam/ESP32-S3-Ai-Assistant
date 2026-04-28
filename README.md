@@ -1,7 +1,7 @@
 # **ESP32-S3-AI Assistant**
 
 **Author:** Sethun Vithanawasam  
-**Version:** 1.6  
+**Version:** 1.7  
 **Platform:** Arduino IDE  
 **Language:** Arduino / C++  
 
@@ -11,7 +11,7 @@
 
 The **ESP32-AI Assistant** is an interactive, intelligent assistant that runs entirely on an ESP32 microcontroller. It allows users to communicate with AI, manage reminders, check weather, perform web searches, monitor system status, and more — all through the Arduino Serial Monitor, with LED feedback for AI states.
 
-Unlike typical AI projects that require a full PC or cloud interface, this assistant leverages the ESP32’s capabilities to provide a compact, versatile solution. While interaction occurs via a connected computer or mobile device, the ESP32 handles memory, reminders, and real-time responses independently.
+Unlike typical AI projects that require a full PC or cloud interface, this assistant leverages the ESP32’s capabilities to provide a compact, versatile solution. While interaction occurs via a connected computer or mobile device, the ESP32-S3 handles memory, reminders, and real-time responses independently.
 
 Key functionalities include:  
 
@@ -71,7 +71,7 @@ Key functionalities include:
 
 To run **ESP32-AI Assistant**, you will need:  
 
-- An ESP32 development board (ESP32-S3 or standard DevKit)  
+- An ESP32-S3 development board (ESP32-S3 or standard DevKit)  
 - Arduino IDE installed on your PC  
 - Internet access via WiFi  
 - Required Arduino libraries for:  
@@ -147,5 +147,5 @@ Serial Monitor showing AI assistant responding (Hello).
 ## **Credits**
 
 - **Created by:** Sethun Vithanawasam  
-- **Uses:** Google Gemini API, Weather API, and Google Custom Search API  
-- **Powered by:** ESP32 and Arduino IDE  
+- **Uses:** Groq API, Weather API, and Google Custom Search API  
+- **Powered by:** ESP32-S3 and Arduino IDE  
