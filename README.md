@@ -1,7 +1,7 @@
 # **ESP32-S3-AI Assistant**
 
 **Author:** Sethun Vithanawasam  
-**Version:** 1.7  
+**Version:** 1.7.5  
 **Platform:** Arduino IDE  
 **Language:** Arduino / C++  
 
@@ -15,7 +15,7 @@ Unlike typical AI projects that require a full PC or cloud interface, this assis
 
 Key functionalities include:  
 
-- **Chat with AI:** Natural language conversations powered by Google Gemini API.  
+- **Chat with AI:** Natural language conversations powered by Groq API.  
 - **Memory system:** Long-term fact storage with relevance scoring, persistent across reboots using FATFS.  
 - **Reminders:** Schedule one-time, daily, weekly, or monthly reminders with conflict detection.  
 - **Weather updates:** Fetch current weather for any city.  
@@ -54,7 +54,7 @@ Key functionalities include:
 - Monitors WiFi connectivity, local IP, CPU temperature, heap status, and uptime.  
 
 ### **Time and Date**
-- Uses NTP to maintain accurate local time (Sri Lanka UTC+5:30).  
+- Uses NTP to maintain accurate local time
 - Displays current time and date on demand.  
 
 ### **LED Notifications**
@@ -92,7 +92,7 @@ To run **ESP32-AI Assistant**, you will need:
 
 The assistant integrates with three main APIs. Each requires an API key:
 
-### **Google Gemini API**
+### **Groq API**
 - Provides conversational intelligence.  
 - Requires a Google API key.  
 
@@ -110,8 +110,8 @@ The assistant integrates with three main APIs. Each requires an API key:
 
 1. Install Arduino IDE and ensure ESP32 board support is added.  
 2. Open the `.ino` file in Arduino IDE.  
-3. Add your personal API keys at the top of the code for Gemini, Weather, and Google Search.  
-4. Connect your ESP32 board via USB, select the correct board and port, and upload the code.  
+3. Add your personal API keys at the top of the code for Groq, Weather, and Google Search.  
+4. Connect your ESP32-S3 board via USB, select the correct board and port, and upload the code.  
 5. Open the Serial Monitor at 115200 baud. Wait for the welcome message.  
 6. Start interacting with the assistant using commands or natural language.  
 
