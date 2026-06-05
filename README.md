@@ -85,7 +85,7 @@ To run **ESP32-AI Assistant**, you will need:
   - Adafruit_NeoPixel  
   - vector  
   - algorithm  
-
+  - Adafruit_NeoPixel
 ---
 
 ## **APIs Used**
