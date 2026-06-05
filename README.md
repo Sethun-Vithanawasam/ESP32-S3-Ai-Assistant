@@ -84,8 +84,7 @@ To run **ESP32-AI Assistant**, you will need:
   - FFat / FS.h  
   - Adafruit_NeoPixel  
   - vector  
-  - algorithm  
-  - Adafruit_NeoPixel
+  - algorithm 
 ---
 
 ## **APIs Used**
